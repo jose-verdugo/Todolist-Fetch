@@ -76,7 +76,7 @@ const Home = () => {
   return (
     <div className="List">
       <h1 className="List-h1">To do List</h1>
-      <div>
+      <div className="List-list"> 
         <input
           className="List-input"
           type="text"
@@ -86,7 +86,7 @@ const Home = () => {
           onKeyDown={handleKey}
         ></input>
         
-        <ul>
+        <ul className="List-ul">
           {lists.map((el, index) => 
             (
               <li className="List-li" key={index}>
@@ -107,7 +107,9 @@ const Home = () => {
           )}
         </ul>
       </div>
-      <div>{lists.length} item left</div>
+      <div className="List-num">{lists.length} item left</div>
+      <div className="List-footer--up"></div>
+      <div className="List-footer--down"></div>
     </div>
   );
 };
